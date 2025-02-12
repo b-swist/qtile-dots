@@ -36,7 +36,7 @@ keys = [
     Key([mod], "r", lazy.spawncmd(), desc="spawn a command using a prompt widget"),
     Key([mod], "Return", lazy.spawn(terminal), desc="launch terminal"),
     Key([mod], "b", lazy.spawn(browser), desc="launch browser"),
-    Key([], "Print", lazy.spawn("hyprshot -m region --clipboard-only"), desc="launch browser"),
+    Key([], "Print", lazy.spawn("hyprshot -m region --clipboard-only"), desc="take a screenshot"),
 
     Key([mod], "Tab", lazy.next_layout(), desc="toggle between layouts"),
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(), desc="toggle split and unsplit sides of stack"),
