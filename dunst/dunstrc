@@ -1,0 +1,26 @@
+[global]
+font = "Iosevka Nerd Font 10"
+origin = bottom-right
+width = (350, 350)
+height = (0, 150)
+offset = (30, 50)
+gap_size = 10
+padding = 10
+horizontal_padding = 18
+notification_limit = 13
+format = "<span font="11" weight="bold">%a</span>\n%s\n%b"
+enable_recursive_icon_lookup = true
+frame_color = "#89dceb"
+
+[urgency_low]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_normal]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_critical]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#fab387"
