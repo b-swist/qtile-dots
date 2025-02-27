@@ -34,6 +34,8 @@ keys = [
     Key([mod], "t", lazy.window.toggle_floating(), desc="toggle floating"),
 
     Key([mod], "r", lazy.spawncmd(), desc="spawn a command using a prompt widget"),
+    Key([mod], "e", lazy.spawn("rofi -show drun"), desc="spawn rofi"),
+    Key([mod, "shift"], "e", lazy.spawn("rofi -modi emoji -show emoji"), desc="spawn rofi emoji picker"),
     Key([mod], "Return", lazy.spawn(terminal), desc="launch terminal"),
     Key([mod], "b", lazy.spawn(browser), desc="launch browser"),
     Key([], "Print", lazy.spawn("hyprshot -m region --clipboard-only"), desc="take a screenshot"),
