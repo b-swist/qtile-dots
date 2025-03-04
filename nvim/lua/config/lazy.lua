@@ -15,34 +15,3 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
-    -- -- {
-    -- --     "williamboman/mason.nvim",
-    -- --     dependencies = {
-    -- --         "williamboman/mason-lspconfig.nvim",
-    -- --         "neovim/nvim-lspconfig"
-    -- --     }
-    -- -- },
-    --
-    -- -- {
-    -- --     "hrsh7th/nvim-cmp",
-    -- --     dependencies = {
-    -- --         "hrsh7th/cmp-nvim-lsp",
-    -- --         "hrsh7th/cmp-buffer",
-    -- --         "hrsh7th/cmp-path",
-    -- --         "hrsh7th/cmp-cmdline",
-    -- --         "L3MON4D3/LuaSnip",
-    -- --     },
-    -- --     -- config = function()
-    -- --     --     require("plugins.nvim-cmp")
-    -- --     -- end,
-    -- -- },
-    -- -- {
-    -- --     "windwp/nvim-autopairs",
-    -- --     event = "InsertEnter",
-    -- --     -- config = true
-    -- --     -- use opts = {} for passing setup options
-    -- --     -- this is equivalent to setup({}) function
-    -- -- },
-    --
-    -- {
-

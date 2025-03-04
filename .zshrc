@@ -51,7 +51,7 @@ setopt prompt_subst
 
 PS1=$'%B%F{magenta}%n%f at %F{blue}%m%f in %F{cyan}[%~]%f ${vcs_info_msg_0_}\n>%b '
 PS2='%B>%b '
-RPROMPT='%B%D{%d %h, %R}%b'
+# RPROMPT='%B%D{%d %h, %R}%b'
 
 # keybinds
 bindkey -e
