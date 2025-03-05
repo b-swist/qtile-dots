@@ -5,7 +5,9 @@ local M = {
 }
 
 function M.config()
-    require("dashboard").setup()
+    require("dashboard").setup({
+        theme = "doom",
+    })
 end
 
 return M
