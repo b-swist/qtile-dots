@@ -10,7 +10,8 @@ function M.config()
 
     local Rule = require("nvim-autopairs.rule")
     require("nvim-autopairs").add_rules({
-        Rule("$", "$", "tex"):with_move(function(opts) return opts.next_char == opts.char end)
+        Rule("$", "$", "tex"):with_move(function(opts) return opts.next_char == opts.char end),
+        Rule("|", "|", "tex"):with_move(function(opts) return opts.next_char == opts.char end)
     })
 end
 
