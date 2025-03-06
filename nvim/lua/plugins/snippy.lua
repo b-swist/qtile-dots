@@ -5,12 +5,16 @@ local M = {
     }
 }
 
+function fname(...)
+    
+end
+
 function M.config()
     require("snippy").setup({
         mappings = {
             is = {
-                ["<Tab>"] = "expand_or_advance",
-                ["<S-Tab>"] = "previous"
+                ["<CR>"] = "expand_or_advance",
+                ["<S-CR>"] = "previous"
             }
         }
     })

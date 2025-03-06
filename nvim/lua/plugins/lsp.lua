@@ -19,11 +19,18 @@ function M.config()
         automatic_installation = true
     })
 
+    local lspconfig = require("lspconfig")
+
     for _, server in ipairs(M.servers) do
-        require("lspconfig")[server].setup({
+        lspconfig[server].setup({
             capabilities = require("cmp_nvim_lsp").default_capabilities()
         })
     end
+
+    lspconfig.lua_ls.setup({
+        settings = { Lua = { diagnostics = { globals = { "vim" } } } }
+    })
+
 end
 
 return M
