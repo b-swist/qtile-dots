@@ -58,29 +58,30 @@ for vt in range(1, 8):
         Key(["control", "mod1"], f"f{vt}", lazy.core.change_vt(vt).when(func=lambda: qtile.core.name == "wayland"))
     )
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(i, label="󰽢") for i in "123456789"]
 
-@hook.subscribe.setgroup
-def setgroup():
-    for i in range(0, 9):
-        qtile.groups[i].label = "󰽤"
-    qtile.current_group.label = "󰽢"
+# Make current group have different label:
+# @hook.subscribe.setgroup
+# def setgroup():
+#     for i in range(0, 9):
+#         qtile.groups[i].label = "󰽤"
+#     qtile.current_group.label = "󰽢"
 
 for i in groups:
     keys.extend([
         Key([mod], i.name, lazy.group[i.name].toscreen()),
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True)),
+        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True))
     ])
 
 layouts = [
     layout.Columns(
-        margin = 10,
-        border_width = 0
+        margin=10,
+        border_width=0
     ),
 
     layout.Plasma(
-        margin = 10,
-        border_width = 0
+        margin=10,
+        border_width=0
     )
 ]
 
@@ -97,8 +98,7 @@ screens = [
         wallpaper="~/pictures/wallpapers/magenta-cat.png",
         wallpaper_mode="fill",
 
-        bottom=bar.Bar(
-            [
+        bottom=bar.Bar([
                 widget.Spacer(length=15),
                 widget.GroupBox(
                     spacing=10,
@@ -160,10 +160,12 @@ floating_layout = layout.Floating(
     ]
 )
 
+
 @hook.subscribe.startup_once
 def autostart():
-    script=os.path.expanduser("~/.config/qtile/autostart.sh")
+    script = os.path.expanduser("~/.config/qtile/autostart.sh")
     subprocess.call(script)
+
 
 wl_xcursor_theme = None
 wl_xcursor_size = 24
