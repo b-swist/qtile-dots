@@ -1,3 +1,4 @@
 include catppuccin-mocha
 
 set database sqlite
+set page-padding 15

@@ -9,7 +9,8 @@ local M = {
 
 M.servers = {
     "lua_ls",
-    "pylsp"
+    "pylsp",
+    "html",
 }
 
 function M.config()
