@@ -7,6 +7,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export GOPATH="$XDG_DATA_HOME"/go
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
@@ -46,7 +47,8 @@ colors
 
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git*' formats 'on %F{yellow}(󰘬 %b)%f' # or %F{215} for orange
+zstyle ':vcs_info:git*' formats 'on %F{yellow}(%b)%f' # or %F{215} for orange
+# zstyle ':vcs_info:git*' formats 'on %F{yellow}(󰘬 %b)%f' # with branch icon
 setopt prompt_subst
 
 PS1=$'%B%F{magenta}%n%f at %F{blue}%m%f in %F{cyan}[%~]%f ${vcs_info_msg_0_}\n>%b '
@@ -55,6 +57,9 @@ PS2='%B>%b '
 
 # keybinds
 bindkey -e
+
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
 
 # aliases
 alias ll='ls -lAh --color=auto --group-directories-first'
