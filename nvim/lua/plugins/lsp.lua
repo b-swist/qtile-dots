@@ -11,6 +11,7 @@ M.servers = {
     "lua_ls",
     "pylsp",
     "html",
+    "gopls"
 }
 
 function M.config()
