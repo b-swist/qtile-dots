@@ -32,7 +32,6 @@ function M.config()
     lspconfig.lua_ls.setup({
         settings = { Lua = { diagnostics = { globals = { "vim" } } } }
     })
-
 end
 
 return M
