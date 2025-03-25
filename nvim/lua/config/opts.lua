@@ -25,6 +25,7 @@ vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.background = "dark"
 vim.opt.termguicolors = true
 
 vim.api.nvim_create_autocmd("FileType", {
