@@ -2,4 +2,4 @@ require("config.opts")
 require("config.keymaps")
 require("config.lazy")
 
-vim.cmd.colorscheme("zenbones")
+vim.cmd.colorscheme("catppuccin-mocha")

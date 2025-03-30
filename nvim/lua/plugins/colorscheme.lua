@@ -1,6 +1,6 @@
 local M = {
-    "zenbones-theme/zenbones.nvim",
-    dependencies = { "rktjmp/lush.nvim" },
+    "catppuccin/nvim",
+    name = "catppuccin",
     lazy = false,
     priority = 1000
 }
