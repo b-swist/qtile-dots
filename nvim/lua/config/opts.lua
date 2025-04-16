@@ -1,13 +1,13 @@
 vim.opt.clipboard = "unnamedplus"
 vim.opt.mouse = "a"
 vim.opt.undofile = true
+vim.opt.confirm = true
 vim.opt.signcolumn = "yes"
-vim.opt.inccommand = "split"
-vim.opt.list = true
 vim.opt.showmode = false
+vim.opt.list = true
 vim.opt.wrap = true
 vim.opt.linebreak = true
-
+vim.opt.breakindent = true
 vim.opt.number = true
 vim.opt.scrolloff = 8
 vim.opt.splitbelow = true
@@ -20,6 +20,7 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
+vim.opt.inccommand = "split"
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
